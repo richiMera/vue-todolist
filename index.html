@@ -14,15 +14,13 @@
       <div class="input_container">
         <div class="input_field">
           <input v-on:keyup.13="addTodo" type="text" name="" value="" v-model="message">
-          <button @click="addTodo">clicca</button>
+          <button @click="addTodo">Add</button>
         </div>
       </div>
       <div class="list_container">
-        <div class="ul_field">
           <ul class="normal_list">
-            <li v-for="(intention, index) in intentions">{{ intention }}<samp><i class="fas fa-trash-alt" @click="removeElement(index)"></i></samp> </li>
+            <li v-for="(intention, index) in intentions" :class="(index % 2) ? 'white': 'gray'"><span>{{ intention }}</span><span><i class="fas fa-trash-alt" @click="removeElement(index)"></i></span> </li>
           </ul>
-        </div>
       </div>
     </div>
 
