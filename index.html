@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+      <title></title>
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  </head>
+  <body>
+    <div id="root">
+      <div class="input_container">
+        <div class="input_field">
+          <input v-on:keyup.13="addTodo" type="text" name="" value="" v-model="message">
+          <button @click="addTodo">clicca</button>
+        </div>
+      </div>
+      <div class="list_container">
+        <div class="ul_field">
+          <ul class="normal_list">
+            <li v-for="(intention, index) in intentions">{{ intention }}<samp><i class="fas fa-trash-alt" @click="removeElement(index)"></i></samp> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
